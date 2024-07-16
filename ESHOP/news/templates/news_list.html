@@ -1,7 +1,6 @@
-<a href="/">Главная</a> |
-<a href="/costumers/">Покупатели</a> |
-<a href="{% url 'news-list' %}">Новости</a> |
-<a href="/admin/">Админка</a>
+{% extends 'base.html' %}
+
+{% block content %}
 
 <h1>Новости</h1>
 {% for obj in news %}
@@ -9,3 +8,5 @@
         <a href="/new-detail/{{ obj.id }}/">{{ obj.title }}</a>
     </div>
 {% endfor %}
+
+{% endblock %}
