@@ -3,12 +3,13 @@
 {% block content %}
 
 <h1>Пользователи</h1>
-<ul>
-{% for user in users %}
-    <li>
-        <a href="/user/{{ user.id }}/">{{ user }}</a>
-    </li>
-{% endfor %}
-</ul>
+<div class="card" style="width:400px">
+    {% for user in users %}
+        <div class="card text-center">
+            <img class="card-img-top col-lg-1 col-sm-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReiyHYtDJQ0t5jCs4j_PiD5ESMvPwnvHVa3w&s" alt="Card image">
+            <a href="/user/{{ user.id }}/">{{ user }}</a>
+        </div>
+    {% endfor %}
+</div>
 
 {% endblock %}
